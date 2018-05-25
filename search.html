@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>Directory</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<body>
+
+  <!-- Navbar -->
+  <div class="top">
+    <div class="bar blue card left-align large">
+      <ul>
+        <li> <a href="/index.html">Home</a></li>
+        <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Display</a>
+          <div class="dropdown-content">
+            <a href="/cgi-bin/print_db.py">Full List</a>
+            <a href="/search.html">Search</a>
+          </div>
+        </li>
+        <li> <a href="/form.html">Add</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="container blue center" style="padding:128px 16px">
+    <h1 class="margin jumbo">SEARCH PAGE</h1>
+    <p class="xlarge">Enter the name you wish to search</p>
+  </header>
+
+<!-- Form with pattern to only allow text characters and spaces, prevent SQL injections-->
+  <form autocomplete="on" action="/cgi-bin/search_db.py" method="post">
+    Search the Database: <input type="search" id="search" pattern="^[a-zA-Zàâçéèêëîïôûùüÿñæœ ]*$" name="search"><br>
+    <div class="button">
+      <button id="submitQuerry" type="submit">Submit</button>
+    </div>
+  </form>
+
+
+
+
+  <!-- Footer -->
+  <footer class="container padding-64 center opacity">
+    <div class="xlarge padding-32">
+      <i class="fa fa-facebook-official hover-opacity"></i>
+      <i class="fa fa-instagram hover-opacity"></i>
+      <i class="fa fa-snapchat hover-opacity"></i>
+      <i class="fa fa-pinterest-p hover-opacity"></i>
+      <i class="fa fa-twitter hover-opacity"></i>
+      <i class="fa fa-linkedin hover-opacity"></i>
+    </div>
+    <p>Modified for WebDev Project</p>
+  </footer>
+
+
+</body>
+
+</html>
